@@ -4,24 +4,51 @@ import '../css/Event.css';
 
 const Events = () => {
     const [events, setEvents] = useState([]);
+    const [filteredEvents, setFilteredEvents] = useState([]);
+    const [selectedLocation, setSelectedLocation] = useState('');
 
     useEffect(() => {
         (async () => {
             try {
                 const eventsData = await getAllEvents();
-                console.log(eventsData);  // Log the data to ensure it includes location_name and address
                 setEvents(eventsData);
+                setFilteredEvents(eventsData);  // Initially show all events
             } catch (error) {
                 console.error('Failed to fetch events:', error);
             }
         })();
     }, []);
 
+    const handleLocationChange = (e) => {
+        const location = e.target.value;
+        setSelectedLocation(location);
+        if (location === '') {
+            setFilteredEvents(events);
+        } else {
+            const filtered = events.filter(event => event.location_name === location);
+            setFilteredEvents(filtered);
+        }
+    };
+
+    const handleResetFilter = () => {
+        setSelectedLocation('');
+        setFilteredEvents(events);
+    };
+
     return (
         <div className="events-page">
             <h1>Upcoming Events</h1>
+            <div className="filter-container">
+                <select value={selectedLocation} onChange={handleLocationChange}>
+                    <option value="">See events at . . .</option>
+                    {Array.from(new Set(events.map(event => event.location_name))).map(location => (
+                        <option key={location} value={location}>{location}</option>
+                    ))}
+                </select>
+                <button onClick={handleResetFilter}>Show All Events</button>
+            </div>
             <ul className="events-list">
-                {events.map((event) => {
+                {filteredEvents.map((event) => {
                     const formattedDate = new Date(event.date).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
