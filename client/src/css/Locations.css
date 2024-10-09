@@ -50,15 +50,21 @@
     text-decoration: none;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, pointer-events 1s ease-in-out;
     pointer-events: none;
+    /* Start with pointer-events disabled */
+    z-index: 1;
+    /* Button starts below the circle */
 }
 
 /* On hover, the location button fades in */
 .circle:hover+.location-button {
     opacity: 1;
-    pointer-events: auto;
+    /* Enable pointer-events after the button has faded in */
+    z-index: 3;
+    /* Bring the button to the front */
 }
+
 
 /* Button hover effect */
 .location-button:hover {

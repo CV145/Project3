@@ -10,3 +10,8 @@ Note: when the parent fades, so does the child
 If the button and circle were siblings of the same parent, a location-item div, then the location-item div would need to be scattered about the page and not the circle
 
 How to scatter about a div across the page?
+
+Clicking on the location button is no longer working
+
+
+Chicken and egg problem. Location and circle pointer events interact with each other. Circle won't fade away unless mouse is hovered over it. If the circle does fade away, it's because the location button doesn't have pointer events on. But if the location button has no pointer events, then it won't be able to be clicked. Have other people solved this problem?

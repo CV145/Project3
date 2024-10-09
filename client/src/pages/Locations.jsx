@@ -17,9 +17,9 @@ const Locations = () => {
             <div className="locations-list">
                 {locations.map((location, index) => (
                     <div key={index} id={location.id} className='location-item'>
-                        <div className="circle">
+                        <a href={location.path} className="circle">
                             {/* Red circle */}
-                        </div>
+                        </a>
                         <a href={location.path} className="location-button">
                             {location.name}
                         </a>
