@@ -13,8 +13,8 @@ const Locations = () => {
 
     return (
         <div className="locations-container">
-            <h1>SELECT A LOCATION</h1>
             <div className="locations-list">
+                <div></div>
                 {locations.map((location, index) => (
                     <div key={index} id={location.id} className='location-item'>
                         <a href={location.path} className="circle">

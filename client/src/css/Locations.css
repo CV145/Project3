@@ -1,4 +1,6 @@
 .locations-container {
+    height: 100vh;
+    width: 100vw;
     text-align: center;
     position: relative;
     /* Allow inner elements to position themselves in relation to this container */
@@ -7,8 +9,9 @@
 .locations-list {
     position: relative;
     /* Make positions of .location-item relative to this list */
-    height: 100vh;
+    height: 100%;
     /* Adjust the height to fit the screen or a suitable value */
+    width: 100%;
 }
 
 .location-item {
@@ -72,13 +75,15 @@
 }
 
 /* Scattering positions for each location item */
+/*top: X% - means the element is positioned X percent down from the top of the parent element*/
+/*left: X% - means the element is positioned X percent from the left edge of the parent element*/
 #circle1 {
-    top: 20%;
+    top: 10%;
     left: 10%;
 }
 
 #circle2 {
-    top: 40%;
+    top: 20%;
     left: 40%;
 }
 
@@ -88,16 +93,16 @@
 }
 
 #circle4 {
-    top: 60%;
+    top: 40%;
     left: 20%;
 }
 
 #circle5 {
-    top: 75%;
+    top: 45%;
     left: 50%;
 }
 
 #circle6 {
-    top: 50%;
+    top: 5%;
     left: 80%;
 }
