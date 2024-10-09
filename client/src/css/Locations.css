@@ -1,59 +1,97 @@
-.available-locations {
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
-    margin-right: 50px;
+.locations-container {
+    text-align: center;
+    position: relative;
+    /* Allow inner elements to position themselves in relation to this container */
 }
 
-svg {
+.locations-list {
+    position: relative;
+    /* Make positions of .location-item relative to this list */
+    height: 100vh;
+    /* Adjust the height to fit the screen or a suitable value */
+}
+
+.location-item {
     position: absolute;
-    top: -1px;
-    left: 0;
-    width: 100%;
+    /* Allow for absolute positioning within the parent */
+    margin: 0;
+    /* Remove default margin */
 }
 
-svg polygon {
-    fill: transparent;
+/* General styling for the circles */
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
 }
 
-svg polygon:hover {
-    fill: rgba(55, 216, 232, 0.2);
-}
-
-.venue1-button-overlay {
+/* Circle fades out on hover */
+.circle:hover {
     opacity: 0;
-    z-index: 10;
-    position: relative;
-    top: 15%;
-    left: -5%;
 }
 
-.venue2-button-overlay {
+/* Location button starts hidden and fades in */
+.location-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
     opacity: 0;
-    z-index: 10;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
 }
 
-.venue3-button-overlay {
-    opacity: 0;
-    z-index: 10;
-    position: relative;
-    left: 30%;
+/* On hover, the location button fades in */
+.circle:hover+.location-button {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-.venue4-button-overlay {
-    opacity: 0;
-    z-index: 10;
-    position: relative;
+/* Button hover effect */
+.location-button:hover {
+    background-color: #0056b3;
+}
+
+/* Scattering positions for each location item */
+#circle1 {
     top: 20%;
-    left: -5%;
+    left: 10%;
 }
 
-.venue1-button-overlay button,
-.venue2-button-overlay button,
-.venue3-button-overlay button,
-.venue4-button-overlay button {
-    width: 200px;
-    text-transform: uppercase;
-    font-weight: 700;
+#circle2 {
+    top: 40%;
+    left: 40%;
+}
+
+#circle3 {
+    top: 30%;
+    left: 70%;
+}
+
+#circle4 {
+    top: 60%;
+    left: 20%;
+}
+
+#circle5 {
+    top: 75%;
+    left: 50%;
+}
+
+#circle6 {
+    top: 50%;
+    left: 80%;
 }

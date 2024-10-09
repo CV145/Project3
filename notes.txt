@@ -1,0 +1,12 @@
+Location button not showing up on top of circle but instead being positioned in the same place
+How to make the location button show up on top of the circle?
+
+For each location we have a div and this div contains a circle and a location button
+
+Translating the location button moved its position
+All location buttons share the same location. This is not correct. They should all have unique locations, the same as the red circles. Should they be children of the circles then?
+Note: when the parent fades, so does the child
+
+If the button and circle were siblings of the same parent, a location-item div, then the location-item div would need to be scattered about the page and not the circle
+
+How to scatter about a div across the page?

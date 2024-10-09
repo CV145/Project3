@@ -14,9 +14,9 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
-// Allow requests from your React frontend
+// Allow requests from React frontend
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'http://localhost:5174',
 }));
 
 app.use(express.json())
