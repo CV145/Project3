@@ -4,7 +4,7 @@ Submitted by: Carlos Valeriano
 
 About this web app: This app displays events in the Dallas area
 
-Time spent: 10 hours
+Time spent: 10 + 1 hours
 
 ## Required Features
 

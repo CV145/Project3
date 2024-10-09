@@ -37,3 +37,11 @@
 .location-events main i {
     margin-right: 10px;
 }
+
+.event-item h3 {
+    color: black;
+}
+
+.event-item p {
+    color: #333;
+}
