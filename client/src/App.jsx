@@ -1,7 +1,8 @@
 import React from 'react';
 import { useRoutes, Link } from 'react-router-dom';
 import Locations from './pages/Locations';
-import LocationEvents from './pages/LocationEvents';  // Assuming this component handles showing events for a specific location
+import LocationEvents from './pages/LocationEvents';
+import Events from './pages/Events';
 import './App.css';
 
 const App = () => {
@@ -33,6 +34,10 @@ const App = () => {
     {
       path: '/the-exchange-hall',
       element: <LocationEvents locationId={6} locationName="The Exchange Hall" />
+    },
+    {
+      path: '/events',
+      element: <Events />
     }
   ]);
 
@@ -42,6 +47,7 @@ const App = () => {
         <h1>Dallas Plaza</h1>
         <nav>
           <Link to="/" className="home-button">Home</Link>
+          <Link to="/events" className="events-button">Events</Link>
         </nav>
       </header>
 

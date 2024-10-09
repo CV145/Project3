@@ -4,7 +4,7 @@ Submitted by: Carlos Valeriano
 
 About this web app: This app displays events in the Dallas area
 
-Time spent: 10 + 1 hours
+Time spent: 10 + 2 hours
 
 ## Required Features
 
@@ -17,8 +17,8 @@ The following **required** functionality is completed:
   - [ ] **NOTE: Your GIF or a screenshot added to this README must include a view of your Railway database that shows the contents of the table used by your app**
 - [X] **The web app displays the title of the app**
 - [X] **A visual interface allows the user to select a Location they would like to view**
-- [ ] **Clicking on a Location shows a list of all items from the Events table that corresponds to that Location**
-- [ ] **Each Location detail page should have its own unique URL**
+- [X] **Clicking on a Location shows a list of all items from the Events table that corresponds to that Location**
+- [X] **Each Location detail page should have its own unique URL**
 
 The following **optional** features are implemented:
 

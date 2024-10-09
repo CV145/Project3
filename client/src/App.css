@@ -32,7 +32,8 @@ header {
     margin-left: 20px;
 }
 
-.home-button {
+.home-button,
+.events-button {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #007bff;
@@ -40,8 +41,10 @@ header {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    margin-right: 15px;
 }
 
-.home-button:hover {
+.home-button:hover,
+.events-button:hover {
     background-color: #0056b3;
 }
