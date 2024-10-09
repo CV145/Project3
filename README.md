@@ -4,7 +4,7 @@ Submitted by: Carlos Valeriano
 
 About this web app: This app displays events in the Dallas area
 
-Time spent: 10 + 2 hours
+Time spent: 12 hours
 
 ## Required Features
 
@@ -14,7 +14,7 @@ The following **required** functionality is completed:
 
 - [X] **The web app uses React to display data from the API**
 - [X] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
-  - [ ] **NOTE: Your GIF or a screenshot added to this README must include a view of your Railway database that shows the contents of the table used by your app**
+  - [X] **NOTE: Your GIF or a screenshot added to this README must include a view of your Railway database that shows the contents of the table used by your app**
 - [X] **The web app displays the title of the app**
 - [X] **A visual interface allows the user to select a Location they would like to view**
 - [X] **Clicking on a Location shows a list of all items from the Events table that corresponds to that Location**
@@ -22,12 +22,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] An additional page shows all possible `Events` that the user can sort and filter by `Location`
+- [X] An additional page shows all possible `Events` that the user can sort and filter by `Location`
 - [ ] `Events` display a countdown showing the time remaining before that event and appears with different formatting when the event has passed
-
-The following **additional** features are implemented:
-
-- [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
@@ -44,11 +40,11 @@ GIF created with ...  GIF tool here
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+As time went on, it became a little difficult to keep track of things and the project got more and more complex. Also it was challenging to get some of the css down right.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright 2024 Carlos Valeriano
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
